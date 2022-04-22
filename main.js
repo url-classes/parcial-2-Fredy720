@@ -5,7 +5,10 @@ import { fetchWords, getWord, validateInput } from './words'
 const guessedLettersEl = document.querySelector('.guessed-letters')
 const guessedLettersBtn = document.querySelector('.guess')
 const letterInput = document.querySelector('.letter')
+
 // 1. En una variable llamada wordInProgress, guardar un elemento de tipo .word-in-progress
+const wordInProgress = document.querySelector('.word-in-progress')
+
 
 
 const remainingGuessesEl = document.querySelector('.remaining')
@@ -47,7 +50,7 @@ function guessLetter(letter) {
   const validation = validateInput(letter)
 
   // 2. Verificar que la validación se correcta
-  if () {
+  if (validation) {
     makeGuess(letter)
   } else {
     // 3. Mostrar el mensaje de error en el objeto message
