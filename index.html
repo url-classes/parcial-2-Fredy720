@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Unlock&display=swap"
+    rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivina la palabra</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Adivina la palabra
+      </h1>
+      <div class="main-game">
+        <p class="word-in-progress"></p>
+        <p class="message"></p>
+      </div>
+      <p class="remaining">
+        Tienes <span>8 intentos</span>
+      </p>
+      <form action="" class="guess-form">
+        <label for="letter">Escribe una letra</label>
+        <input type="text" name="letter" class="letter" autocomplete="off">
+        <div class="form-element button-element">
+          <button class="guess">¡Adivinar!</button>
+        </div>
+      </form>
+      <div class="info">
+        <h2>Letras adivinadas</h2>
+        <ul class="guessed-letters"></ul>
+      </div>
+      <button class="play-again hide">
+        ¡Jugar de nuevo!
+      </button>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

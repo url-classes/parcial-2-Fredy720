@@ -1,0 +1,12 @@
+@import './game.css';
+
+h1 {
+  background-color: #3A323C;
+  border: 2px solid white;
+  display: block;
+  font-size: 3.5em;
+  margin: 24px 0;
+  padding: 24px 48px;
+}
+
+/* Cambia el estilo del juego a tu gusto */

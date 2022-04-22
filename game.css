@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply flex items-center justify-center;
+  @apply m-0;
+
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0098CF;
+  color: #fafafa;
+}
+
+input {
+  @apply text-center mt-1 p-2;
+  color: #2A2B37;
+  width: 2.25em;
+  font-size: 1.5em;
+  border: 3px solid #28bdbd;
+
+  &:focus,
+  &:active {
+    outline: 0;
+    border: 4px solid #28bdbd;
+  }
+}
+
+.container {
+  @apply mx-auto flex justify-center flex-col items-center;
+
+  background: radial-gradient(50% 50% at 50% 50%,
+    rgba(167, 237, 237, 0.3) 0%,
+    rgba(156, 226, 226, 0) 100%);
+}
+
+.guess-form {
+  @apply flex flex-col items-center;
+
+  label {
+    @apply w-full font-normal text-center;
+    font-size: 14px;
+  }
+}
+
+.guessed-letters {
+  @apply p-0;
+
+  li {
+    @apply inline-block;
+    padding: 0 0.5em;
+    background-color: #FFAE1B;
+  }
+}
+
+.hide {
+  @apply hidden;
+}
+
+.highlight {
+  @apply p-2;
+  background: rgba(#ffe2d6, 0.12);
+  font-size: 1em;
+}
+
+.message {
+  text-align: center;
+}
+
+.main-game {
+  margin: 16px 0;
+}
+
+.underline {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 3px;
+}
+
+.word-in-progress {
+  @apply text-center;
+  background-color: #2C2C29;
+  border-radius: 6px;
+  color: #fafafa;
+  font-size: 30px;
+  letter-spacing: 15px;
+  padding: 8px 16px;
+}
+
+/* animatied background */
+.win {
+  padding: 0 1em;
+  background: linear-gradient(-45deg, #ff9d64, #f5620c);
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+}
+
+.guess,
+.play-again {
+  @apply px-8 py-4 rounded-full mt-4;
+  @apply text-white border-0 self-center;
+
+  background: #ff8d5c;
+  outline: none;
+  cursor: pointer;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: 0;
+    transform: scale(0.98);
+    background: brightness(0.3);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
