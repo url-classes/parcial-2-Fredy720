@@ -47,14 +47,13 @@ function guessLetter(letter) {
   //   valid: true,
   //   error: '',
   // }
-  console.log()
   const validation = validateInput(letter)
 
   // 2. Verificar que la validación se correcta
   if (validation) { //Como ya retorna el valor a la funcion, solo se evalua. 
     makeGuess(letter)
   } else {
-    message.alert("")
+    message.innerText = 'ERROR CON CARACTER'
     // 3. Mostrar el mensaje de error en el objeto message
   }
   letterInput.value = ''
@@ -163,6 +162,10 @@ function playAgain(e) {
   playAgainButton.classList.add('hide');
   remainingGuessesEl.classList.remove('hide');
   guessedLettersEl.classList.remove('hide');
+  init();
+  guessedLetters = []
+  remainingGuesses = 8
+  
 }
 
 // 4. Agregar un evento 'click' al botón guessedLettersBtn
@@ -171,4 +174,7 @@ guessedLettersBtn.addEventListener("click",function(evt){
   handleGuess(evt)
 })
 // 5. Agregar un evento 'click' al botón playAgainButton
+playAgainButton.addEventListener("click",(evt)=>{
+  playAgain(evt)
+})
 
